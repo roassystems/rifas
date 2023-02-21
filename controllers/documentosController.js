@@ -1,7 +1,7 @@
 const { response, request } = require("express");
 const Documentos = require('../models/documentos');
 const uploadServer = require("../middlewares/uploadServer");
-const baseUrl = `${process.env.URL_SERVER_DEPLOY}:${process.env.PORT}`;
+const baseUrl = `${process.env.URL_SERVER_DEPLOY}`;
 const getDocumentosBeneficiarios = async(req, res = response) => {
    //const query = { estadoActivo: true };
     const [ total, documentos ] = await Promise.all([
